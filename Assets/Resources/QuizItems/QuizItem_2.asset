@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
+  m_Name: QuizItem_2
+  m_EditorClassIdentifier: 
+  videoClip: {fileID: 32900000, guid: 8e2ddb711c4aace47ae11559d2967205, type: 3}
+  question: Lakukan B, apa langkah selanjutnya?
+  answers:
+  - message: Salah
+    isCorrect: 0
+  - message: Benar
+    isCorrect: 1
+  - message: Salah
+    isCorrect: 0
