@@ -9,6 +9,8 @@
         public const string SCENE_SPLASHSCREEN = "SplashScreen";
 
         public const string TAG_SLICEBAR = "SliceBar";
+        public const string TAG_BARRIER = "Barrier";
+        public const string TAG_POINT = "Point";
 
         public const string KEY_VERSION = "version";
         public const string KEY_VOLUME = "volume";
