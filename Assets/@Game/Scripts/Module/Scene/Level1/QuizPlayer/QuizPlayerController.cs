@@ -3,6 +3,7 @@ using DG.Tweening;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ProjectAdvergame.Module.QuizPlayer
@@ -42,6 +43,7 @@ namespace ProjectAdvergame.Module.QuizPlayer
 
         public void AnswerCheck(int answerIndex)
         {
+            EventSystem.current.SetSelectedGameObject(null);
             if (_view.currentItem.answers[answerIndex].isCorrect)
             {
                 _view.feedbackImage.DOColor(_view.correctColor, 1).OnComplete(() => _view.feedbackImage.DOColor(_view.normalColor, .5f));
