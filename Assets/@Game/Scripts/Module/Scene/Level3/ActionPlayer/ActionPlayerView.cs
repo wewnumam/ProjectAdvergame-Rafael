@@ -14,14 +14,14 @@ namespace ProjectAdvergame.Module.ActionPlayer
     {
         public VideoPlayer videoPlayer;
         public TMP_Text messageText;
+        public TMP_Text failCountText;
+        [ReadOnly] public int failCount;
         [ReadOnly] public SO_ActionItem currentItem;
         [ReadOnly] public int currentIndex;
         public List<ActionItem> items;
         public UnityEvent onGameEnd;
 
-        private UnityAction onNextAction;
-        private UnityAction onPause;
-        private UnityAction onResume;
+        private UnityAction onNextAction, onPause, onResume, onAddFailCount;
 
         [Button]
         public void NextAction()
@@ -35,11 +35,17 @@ namespace ProjectAdvergame.Module.ActionPlayer
             onResume?.Invoke();
         }
 
-        public void SetCallBacks(UnityAction onNextAction, UnityAction onPause, UnityAction onResume)
+        public void AddFailCount()
+        {
+            onAddFailCount?.Invoke();
+        }
+
+        public void SetCallBacks(UnityAction onNextAction, UnityAction onPause, UnityAction onResume, UnityAction onAddFailCount)
         {
             this.onNextAction = onNextAction;
             this.onPause = onPause;
             this.onResume = onResume;
+            this.onAddFailCount = onAddFailCount;
         }
 
         protected override void InitRenderModel(IActionPlayerModel model)

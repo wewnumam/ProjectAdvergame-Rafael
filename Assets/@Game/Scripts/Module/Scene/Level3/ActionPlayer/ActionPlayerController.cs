@@ -1,4 +1,4 @@
-using Agate.MVC.Base;
+﻿using Agate.MVC.Base;
 using Agate.MVC.Core;
 using DG.Tweening;
 using ProjectAdvergame.Module.QuizPlayer;
@@ -22,7 +22,7 @@ namespace ProjectAdvergame.Module.ActionPlayer
             view.videoPlayer.loopPointReached += OnNextAction;
             view.videoPlayer.Play();
             view.SetPause();
-            view.SetCallBacks(OnNextAction, OnPause, OnResume);
+            view.SetCallBacks(OnNextAction, OnPause, OnResume, OnAddFailCount);
         }
 
         private void OnNextAction(VideoPlayer source)
@@ -58,6 +58,12 @@ namespace ProjectAdvergame.Module.ActionPlayer
                 _view.videoPlayer.Play();
                 _view.SetPause();
             }
+        }
+
+        private void OnAddFailCount()
+        {
+            _view.failCount++;
+            _view.failCountText.SetText($"{_view.failCount}↕");
         }
     }
 }

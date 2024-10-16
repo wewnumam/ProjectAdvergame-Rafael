@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: 0ae6ee1b48e1be84abe6822adae80d62, type: 3}
   message: Pertama2, lakukan A!
-  stopTime: 3
+  stopTime: 5

@@ -8,6 +8,8 @@
         public const string SCENE_LEVEL3 = "Level3";
         public const string SCENE_SPLASHSCREEN = "SplashScreen";
 
+        public const string TAG_SLICEBAR = "SliceBar";
+
         public const string KEY_VERSION = "version";
         public const string KEY_VOLUME = "volume";
         public const string KEY_VIBRATE = "vibrate";
