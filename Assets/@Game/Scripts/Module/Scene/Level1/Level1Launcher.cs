@@ -7,6 +7,7 @@ using ProjectTA.Message;
 using UnityEngine;
 using ProjectTA.Utility;
 using ProjectAdvergame.Module.QuizPlayer;
+using ProjectAdvergame.Module.GameplayState;
 
 namespace ProjectTA.Scene.Level1
 {
@@ -15,10 +16,12 @@ namespace ProjectTA.Scene.Level1
         public override string SceneName {get {return TagManager.SCENE_LEVEL1;}}
 
         public QuizPlayerController _quizPlayerController;
+        public GameplayStateController _gameplayStateController;
 
         protected override IController[] GetSceneDependencies()
         {
             return new IController[] {
+                new GameplayStateController(),
                 new QuizPlayerController(),
             };
         }
@@ -26,6 +29,7 @@ namespace ProjectTA.Scene.Level1
         protected override IConnector[] GetSceneConnectors()
         {
             return new IConnector[] {
+                new GameplayStateConnector(),
                 new QuizPlayerConnector(),
             };
         }
@@ -44,6 +48,8 @@ namespace ProjectTA.Scene.Level1
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName));
 
             _view.SetCallback(GoToMainMenu);
+
+            _gameplayStateController.SetView(_view.GameplayStateView);
 
             _quizPlayerController.SetView(_view.QuizPlayerView);
 

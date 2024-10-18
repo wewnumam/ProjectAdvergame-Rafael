@@ -7,6 +7,7 @@ using ProjectTA.Message;
 using UnityEngine;
 using ProjectTA.Utility;
 using ProjectAdvergame.Module.ActionPlayer;
+using ProjectAdvergame.Module.GameplayState;
 
 namespace ProjectTA.Scene.Level3
 {
@@ -14,11 +15,13 @@ namespace ProjectTA.Scene.Level3
     {
         public override string SceneName {get {return TagManager.SCENE_LEVEL3;}}
 
+        GameplayStateController _gameplayState;
         ActionPlayerController _actionPlayer;
 
         protected override IController[] GetSceneDependencies()
         {
             return new IController[] {
+                new GameplayStateController(),
                 new ActionPlayerController(),
             };
         }
@@ -26,6 +29,7 @@ namespace ProjectTA.Scene.Level3
         protected override IConnector[] GetSceneConnectors()
         {
             return new IConnector[] {
+                new GameplayStateConnector(),
                 new ActionPlayerConnector(),
             };
         }
@@ -44,6 +48,8 @@ namespace ProjectTA.Scene.Level3
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName));
 
             _view.SetCallback(GoToMainMenu);
+
+            _gameplayState.SetView(_view.GameplayStateView);
 
             _actionPlayer.SetView(_view.ActionPlayerView);
 

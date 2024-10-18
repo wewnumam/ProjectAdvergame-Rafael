@@ -2,6 +2,7 @@
 using Agate.MVC.Core;
 using DG.Tweening;
 using ProjectAdvergame.Module.QuizPlayer;
+using ProjectTA.Message;
 using System;
 using System.Linq;
 using TMPro;
@@ -20,8 +21,6 @@ namespace ProjectAdvergame.Module.ActionPlayer
             view.messageText.SetText(view.currentItem.message);
             view.videoPlayer.clip = view.currentItem.videoClip;
             view.videoPlayer.loopPointReached += OnNextAction;
-            view.videoPlayer.Play();
-            view.SetPause();
             view.SetCallBacks(OnNextAction, OnPause, OnResume, OnAddFailCount);
         }
 
@@ -64,6 +63,12 @@ namespace ProjectAdvergame.Module.ActionPlayer
         {
             _view.failCount++;
             _view.failCountText.SetText($"{_view.failCount}↕");
+        }
+
+        internal void OnGameStart(GameStartMessage message)
+        {
+            _view.videoPlayer.Play();
+            _view.SetPause();
         }
     }
 }

@@ -1,4 +1,5 @@
 using Agate.MVC.Base;
+using ProjectTA.Message;
 
 namespace ProjectAdvergame.Module.QuizPlayer
 {
@@ -8,10 +9,12 @@ namespace ProjectAdvergame.Module.QuizPlayer
 
         protected override void Connect()
         {
+            Subscribe<GameStartMessage>(_quizPlayer.GameStart);
         }
 
         protected override void Disconnect()
         {
+            Unsubscribe<GameStartMessage>(_quizPlayer.GameStart);
         }
     }
 }

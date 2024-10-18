@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using ProjectTA.Message;
 using UnityEngine;
 using ProjectTA.Utility;
+using ProjectAdvergame.Module.GameplayState;
 
 namespace ProjectTA.Scene.Level2
 {
@@ -13,15 +14,19 @@ namespace ProjectTA.Scene.Level2
     {
         public override string SceneName {get {return TagManager.SCENE_LEVEL2;}}
 
+        private GameplayStateController _gameplayStateController;
+
         protected override IController[] GetSceneDependencies()
         {
             return new IController[] {
+                new GameplayStateController(),
             };
         }
 
         protected override IConnector[] GetSceneConnectors()
         {
             return new IConnector[] {
+                new GameplayStateConnector(),
             };
         }
 
@@ -39,6 +44,8 @@ namespace ProjectTA.Scene.Level2
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName));
 
             _view.SetCallback(GoToMainMenu);
+
+            _gameplayStateController.SetView(_view.GameplayStateView);
 
             yield return null;
         }

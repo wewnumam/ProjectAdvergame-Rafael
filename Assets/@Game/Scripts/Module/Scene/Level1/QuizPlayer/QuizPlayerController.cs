@@ -1,5 +1,7 @@
 using Agate.MVC.Base;
+using Agate.MVC.Core;
 using DG.Tweening;
+using ProjectTA.Message;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -38,7 +40,6 @@ namespace ProjectAdvergame.Module.QuizPlayer
             }
 
             view.videoPlayer.clip = view.currentItem.videoClip;
-            view.videoPlayer.Play();
         }
 
         public void AnswerCheck(int answerIndex)
@@ -87,6 +88,11 @@ namespace ProjectAdvergame.Module.QuizPlayer
                     _view.buttons[i].gameObject.SetActive(true);
                 }
             }
+        }
+
+        internal void GameStart(GameStartMessage message)
+        {
+            _view.videoPlayer.Play();
         }
     }
 }
