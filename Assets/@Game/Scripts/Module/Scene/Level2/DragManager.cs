@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NaughtyAttributes;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +14,12 @@ public class DragManager : MonoBehaviour
     public TMP_Text progressText;
     public Slider progressSlider; // Slider to display progress
     public UnityEvent onGameWin;
+    [ReadOnly] public DraggableItem currentDraggableItem;
+    public Texture2D normalCursor;
+    public Texture2D hoverCursor;
+    public Texture2D clickCursor;
+    public Vector2 hotSpot = Vector2.zero;
+    public CursorMode cursorMode = CursorMode.Auto;
 
     private List<DraggableItem> draggableItems = new List<DraggableItem>();
 

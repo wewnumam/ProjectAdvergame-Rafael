@@ -42,6 +42,8 @@ namespace ProjectTA.Scene.MainMenu
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName));
 
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
             _view.SetCallbacks(GoToScene, OnQuit);
 
             yield return null;

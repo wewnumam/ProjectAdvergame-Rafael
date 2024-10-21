@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
 using ProjectTA.Utility;
+using static UnityEngine.InputSystem.UI.VirtualMouseInput;
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
@@ -34,10 +35,13 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         originalPosition = rectTransform.anchoredPosition; // Store original position before dragging
         canvasGroup.alpha = 0.6f; // Make the item semi-transparent while dragging
         canvasGroup.blocksRaycasts = false; // Ignore raycasts so it can be dropped
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        Cursor.SetCursor(dragManager.clickCursor, dragManager.hotSpot, dragManager.cursorMode);
+        
         if (isMoving) return;
 
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor; // Adjust position
@@ -59,6 +63,26 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         else
         {
             StartCoroutine(SmoothMove(originalPosition));
+        }
+
+        Cursor.SetCursor(dragManager.normalCursor, dragManager.hotSpot, dragManager.cursorMode);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (dragManager.currentDraggableItem == null || dragManager.currentDraggableItem == this)
+        {
+            dragManager.currentDraggableItem = this; // Set the current object as the active cursor changer
+            Cursor.SetCursor(dragManager.hoverCursor, dragManager.hotSpot, dragManager.cursorMode);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (dragManager.currentDraggableItem == this)
+        {
+            Cursor.SetCursor(dragManager.normalCursor, dragManager.hotSpot, dragManager.cursorMode);
+            dragManager.currentDraggableItem = null; // Reset active cursor changer when exiting
         }
     }
 
