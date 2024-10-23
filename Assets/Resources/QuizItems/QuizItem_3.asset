@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
   m_Name: QuizItem_3
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 84e337deccc650e48ac372f57d3bdc3c, type: 3}
-  question: Lakukan C, apa langkah selanjutnya?
+  videoClip: {fileID: 32900000, guid: 29acda7a09c18674bb29cfacc26315c5, type: 3}
+  question: Sekarang, kangkung akan dicampur dengan banyak bumbu. Apa yang harus
+    dilakukan selanjutnya jika, adonan akan mengembang?
   answers:
-  - message: Benar
+  - message: Mengkukusnya di oven
     isCorrect: 1
-  - message: Salah
+  - message: Menggorengya di teflon
     isCorrect: 0
-  - message: Salah
+  - message: Memasukkanya ke kulkas
     isCorrect: 0

@@ -64,11 +64,12 @@ namespace ProjectAdvergame.Module.QuizPlayer
 
         public void SetNextQuizItem()
         {
+            foreach (var button in _view.buttons)
+                button.gameObject.SetActive(false);
+
             _view.currentIndex++;
             if (_view.currentIndex > _view.items.Count - 1)
             {
-                foreach (var button in _view.buttons)
-                    button.gameObject.SetActive(false);
 
                 _view.onGameEnd?.Invoke();
             }

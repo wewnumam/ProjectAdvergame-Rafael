@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcee86ab9dac5f4fa1806dd78780e8c, type: 3}
   m_Name: ActionItem_1
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 0ae6ee1b48e1be84abe6822adae80d62, type: 3}
-  message: Pertama2, lakukan A!
-  stopTime: 5
+  videoClip: {fileID: 32900000, guid: 075ce80f741358e43a4d284aff041008, type: 3}
+  message: 'Keringkan bunga telang didalam oven '
+  stopTime: 3

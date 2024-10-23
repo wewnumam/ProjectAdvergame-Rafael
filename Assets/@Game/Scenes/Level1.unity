@@ -835,6 +835,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 773735e2f074f3e4db431f40c6e3ae9c, type: 2}
   - {fileID: 11400000, guid: 5855262a1bd694048a89b8d82ca50856, type: 2}
   - {fileID: 11400000, guid: e00897a38d52eaa42a0ec33a58218c5c, type: 2}
+  - {fileID: 11400000, guid: 4aaa8eabb36eda34ebe38596bcb6137f, type: 2}
+  - {fileID: 11400000, guid: 4bc782491f0b2bf45937070c4b360eca, type: 2}
+  - {fileID: 11400000, guid: 428ad7d329cfe954fa54dabe68066db5, type: 2}
   buttons: []
   currentItem: {fileID: 0}
   currentIndex: 0
@@ -2285,7 +2288,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 636.39, y: 72}
+  m_SizeDelta: {x: 656.59, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753398016
 MonoBehaviour:
@@ -2307,7 +2310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KERIPIK KANGKUNG
+  m_text: KANGKUNG RENDANG
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d237d3ab18ebd10458c5ea1b801dc51f, type: 2}
   m_sharedMaterial: {fileID: 832917236972434419, guid: d237d3ab18ebd10458c5ea1b801dc51f,
@@ -2845,8 +2848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: 4}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142040786
 MonoBehaviour:

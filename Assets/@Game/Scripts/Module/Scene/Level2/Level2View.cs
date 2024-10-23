@@ -10,6 +10,11 @@ namespace ProjectTA.Scene.Level2
         public GameplayStateView GameplayStateView;
         public Button mainMenuButton;
 
+        public void GoToMainMenu()
+        {
+            mainMenuButton.onClick.Invoke();
+        }
+
         public void SetCallback(UnityAction onMainMenu)
         {
             mainMenuButton.onClick.RemoveAllListeners();

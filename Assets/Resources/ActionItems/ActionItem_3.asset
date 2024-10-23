@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcee86ab9dac5f4fa1806dd78780e8c, type: 3}
   m_Name: ActionItem_3
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 29acda7a09c18674bb29cfacc26315c5, type: 3}
-  message: Kemudian, lakukan C!
-  stopTime: 5.5
+  videoClip: {fileID: 32900000, guid: dc212e410878fc440bb8a467b24d0cf6, type: 3}
+  message: Air rebusan bunga telang dicampur dengan resep rahasia.
+  stopTime: 9

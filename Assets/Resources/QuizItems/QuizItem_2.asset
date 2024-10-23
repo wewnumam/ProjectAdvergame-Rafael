@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
   m_Name: QuizItem_2
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 8e2ddb711c4aace47ae11559d2967205, type: 3}
-  question: Lakukan B, apa langkah selanjutnya?
+  videoClip: {fileID: 32900000, guid: 84e337deccc650e48ac372f57d3bdc3c, type: 3}
+  question: Ingat! Kangkung yang di blender jangan campur air, agar masih memiliki
+    texture. Apa yang harus dilakukan selanjutnya jika, kangkung kaya akan rasa?
   answers:
-  - message: Salah
+  - message: 'Mengkukusnya di oven '
     isCorrect: 0
-  - message: Benar
+  - message: Mencampur ke adonan
     isCorrect: 1
-  - message: Salah
+  - message: Memasukkanya ke kulkas
     isCorrect: 0

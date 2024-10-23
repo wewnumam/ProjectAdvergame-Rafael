@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcee86ab9dac5f4fa1806dd78780e8c, type: 3}
   m_Name: ActionItem_2
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: c6547b65afade2447a3b82216ebfcba2, type: 3}
-  message: Selanjutnya, lakukan B!
-  stopTime: 0.5
+  videoClip: {fileID: 32900000, guid: 3e483c60f32e9b247b091113ab5a4617, type: 3}
+  message: 'Bunga telang dicampur kedalam rebusan air panas '
+  stopTime: 3

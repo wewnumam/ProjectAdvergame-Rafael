@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
-  m_Name: QuizItem_1
+  m_Name: QuizItem_5
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: c6547b65afade2447a3b82216ebfcba2, type: 3}
-  question: 'Mula-mula kangkung akan dipotong. Apa yang harus dilakukan selanjutnya
-    jika, kangkung ingin dihaluskan? '
+  videoClip: {fileID: 32900000, guid: 8e2ddb711c4aace47ae11559d2967205, type: 3}
+  question: Adonan siap jadikan bagian yang kecil-kecil.
   answers:
-  - message: 'Menggunakan Blender '
+  - message: 'Dimasukkan kedalam oven kembali '
+    isCorrect: 0
+  - message: 'Bumbu rendang dimasukan, lalu masuk kulkas '
+    isCorrect: 0
+  - message: 'Menggoreng dan memasukan bumbu '
     isCorrect: 1
-  - message: Memakai Grater
-    isCorrect: 0
-  - message: Menggunakan Chopper
-    isCorrect: 0
