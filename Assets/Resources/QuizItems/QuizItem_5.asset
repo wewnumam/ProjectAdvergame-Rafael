@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
   m_Name: QuizItem_5
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: 8e2ddb711c4aace47ae11559d2967205, type: 3}
+  videoClip: {fileID: 32900000, guid: c6547b65afade2447a3b82216ebfcba2, type: 3}
   question: Adonan siap jadikan bagian yang kecil-kecil.
   answers:
   - message: 'Dimasukkan kedalam oven kembali '

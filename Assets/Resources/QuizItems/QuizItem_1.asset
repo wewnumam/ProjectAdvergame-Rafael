@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10475d6ff9009f4bb60a483229c37c7, type: 3}
   m_Name: QuizItem_1
   m_EditorClassIdentifier: 
-  videoClip: {fileID: 32900000, guid: c6547b65afade2447a3b82216ebfcba2, type: 3}
+  videoClip: {fileID: 32900000, guid: e18a29cec170fab4fa88613a25136e65, type: 3}
   question: 'Mula-mula kangkung akan dipotong. Apa yang harus dilakukan selanjutnya
     jika, kangkung ingin dihaluskan? '
   answers:
