@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class KnifeController : MonoBehaviour
 {
@@ -28,7 +29,11 @@ public class KnifeController : MonoBehaviour
     private void MoveBars()
     {
         foreach (var bar in barObjs)
+        {
             bar.SetActive(true);
+            if (bar.TryGetComponent<Image>(out var image))
+                image.color = Color.white;
+        }
         bars.anchoredPosition = Vector3.zero;
         bars.DOAnchorPos(endPoint.anchoredPosition, duration).SetEase(Ease.Linear).OnComplete(() => {
             if (!isWin)
@@ -56,6 +61,8 @@ public class KnifeController : MonoBehaviour
         {
             noteInRange = false;
             currentBarObj = null;
+            if (collision.TryGetComponent<Image>(out var image))
+                image.color = Color.red;
         }
     }
 
